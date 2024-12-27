@@ -67,7 +67,7 @@ struct RemoteImages: View {
                         Image(systemName: "photo.circle.fill").iconModifier()
                     case .success(let image):
                         image.imageModifier().transition(.move(edge: .bottom))
-                    case .failure(let error):
+                    case .failure(_):
                         Image(systemName: "ant.circle.fill").iconModifier()
                     @unknown default:
                         ProgressView()
