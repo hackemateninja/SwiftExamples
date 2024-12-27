@@ -14,9 +14,11 @@ class HikeCardViewModel: ObservableObject{
     @Published var randomNumber: Int = 0
     @Published var imageNumber: Int = 1
     @Published var isSheetPresented =  false
-    @Published var title: String =  "Hike"
-    @Published var description: String = "Fun and enjoyable outdoor activity for friends and families."
-    @Published var buttonTitle: String = "Explore more"
+    @Published var hikeCardData: HikeCardModel = HikeCardModel(
+        title: "Hike",
+        description: "Fun and enjoyable outdoor activity for friends and families.",
+        buttonTitle: "Explore more"
+    )
     
     // MARK: - FUCTION
     func randomImage(){

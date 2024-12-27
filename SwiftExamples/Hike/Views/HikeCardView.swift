@@ -19,8 +19,8 @@ struct HikeCardView: View {
             // MARK: - HEADER
             VStack {
                 HikeCardHeader(
-                    title: viewModel.title,
-                    description: viewModel.description,
+                    title: viewModel.hikeCardData.title,
+                    description: viewModel.hikeCardData.description,
                     buttonImage: "figure.hiking",
                     isSheetPresented: $viewModel.isSheetPresented,
                     action: { viewModel.toggleSheet()}
@@ -37,7 +37,7 @@ struct HikeCardView: View {
                 }
                 
                 // MARK: - FOOTER
-                HikeGradientButton(title: viewModel.buttonTitle){
+                HikeGradientButton(title: viewModel.hikeCardData.buttonTitle){
                     viewModel.randomImage()
                 }
            

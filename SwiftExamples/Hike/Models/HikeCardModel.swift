@@ -10,5 +10,5 @@ import Foundation
 struct HikeCardModel {
     let title: String
     let description: String
-    let buttonImage: String
+    let buttonTitle: String
 }
