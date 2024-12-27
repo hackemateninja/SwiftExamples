@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEB764D32D1AD40C00F3187E"
-               BuildableName = "SwiftCourse.app"
-               BlueprintName = "SwiftCourse"
-               ReferencedContainer = "container:SwiftCourse.xcodeproj">
+               BuildableName = "SwiftExamples.app"
+               BlueprintName = "SwiftExamples"
+               ReferencedContainer = "container:SwiftExamples.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -36,9 +36,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEB764E42D1AD40F00F3187E"
-               BuildableName = "SwiftCourseTests.xctest"
-               BlueprintName = "SwiftCourseTests"
-               ReferencedContainer = "container:SwiftCourse.xcodeproj">
+               BuildableName = "SwiftExamplesTests.xctest"
+               BlueprintName = "SwiftExamplesTests"
+               ReferencedContainer = "container:SwiftExamples.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEB764EE2D1AD41000F3187E"
-               BuildableName = "SwiftCourseUITests.xctest"
-               BlueprintName = "SwiftCourseUITests"
-               ReferencedContainer = "container:SwiftCourse.xcodeproj">
+               BuildableName = "SwiftExamplesUITests.xctest"
+               BlueprintName = "SwiftExamplesUITests"
+               ReferencedContainer = "container:SwiftExamples.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEB764D32D1AD40C00F3187E"
-            BuildableName = "SwiftCourse.app"
-            BlueprintName = "SwiftCourse"
-            ReferencedContainer = "container:SwiftCourse.xcodeproj">
+            BuildableName = "SwiftExamples.app"
+            BlueprintName = "SwiftExamples"
+            ReferencedContainer = "container:SwiftExamples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -86,9 +86,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEB764D32D1AD40C00F3187E"
-            BuildableName = "SwiftCourse.app"
-            BlueprintName = "SwiftCourse"
-            ReferencedContainer = "container:SwiftCourse.xcodeproj">
+            BuildableName = "SwiftExamples.app"
+            BlueprintName = "SwiftExamples"
+            ReferencedContainer = "container:SwiftExamples.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

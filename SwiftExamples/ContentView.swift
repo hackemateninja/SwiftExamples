@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftCourse
+//  SwiftExamples
 //
 //  Created by Herman Orlando Morales Lòpez on 24/12/24.
 //

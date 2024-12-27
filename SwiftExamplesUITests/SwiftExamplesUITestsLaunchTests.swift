@@ -1,13 +1,13 @@
 //
-//  SwiftCourseUITestsLaunchTests.swift
-//  SwiftCourseUITests
+//  SwiftExamplesUITestsLaunchTests.swift
+//  SwiftExamplesUITests
 //
 //  Created by Herman Orlando Morales Lòpez on 24/12/24.
 //
 
 import XCTest
 
-final class SwiftCourseUITestsLaunchTests: XCTestCase {
+final class SwiftExamplesUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
