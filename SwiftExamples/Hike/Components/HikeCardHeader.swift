@@ -19,30 +19,32 @@ struct HikeCardHeader: View {
     var body: some View {
         VStack(alignment: .leading){
             HStack {
-                Text(title)
-                    .fontWeight(.black)
-                    .font(.system(size: 52))
-                    .foregroundStyle(
-                        LinearGradient(
-                            colors: [
-                                Color.customGrayLight,
-                                Color.customGrayMedium],
-                            startPoint: .top,
-                            endPoint: .bottom
+                Group{
+                    Text(title)
+                        .fontWeight(.black)
+                        .font(.system(size: 52))
+                        .foregroundStyle(
+                            LinearGradient(
+                                colors: [
+                                    Color.customGrayLight,
+                                    Color.customGrayMedium],
+                                startPoint: .top,
+                                endPoint: .bottom
+                            )
                         )
-                    )
-                
-                Spacer()
-                
-                Button{
-                    action()
-                }label: {
-                    HikeRoundedButton(image: buttonImage)
-                }
-                .sheet(isPresented: $isSheetPresented){
-                    sheetContent()
-                        .presentationDragIndicator(.visible)
-                        .presentationDetents([.medium, .large])
+                    
+                    Spacer()
+                    
+                    Button{
+                        action()
+                    }label: {
+                        HikeRoundedButton(image: buttonImage)
+                    }
+                    .sheet(isPresented: $isSheetPresented){
+                        sheetContent()
+                            .presentationDragIndicator(.visible)
+                            .presentationDetents([.medium, .large])
+                    }
                 }
             }
             

@@ -32,8 +32,11 @@ struct HikeCardView: View {
                 
                 // MARK: - MAIN CONTENT
                 ZStack{
-                    HikeCircle()
-                    HikeImage(imageNumber: viewModel.imageNumber)
+                    Group{
+                        HikeCircle()
+                        HikeImage(imageNumber: viewModel.imageNumber)
+                    }
+
                 }
                 
                 // MARK: - FOOTER

@@ -61,26 +61,28 @@ struct HikeCircle: View {
                     }
                 }
             ZStack{
-                ForEach(0...randomCircle, id: \.self) { item in
-                    Circle()
-                        .foregroundColor(.white)
-                        .opacity(0.25)
-                        .frame(width: randomSize())
-                        .position(
-                            x: randomCoordinate(),
-                            y: randomCoordinate()
-                        )
-                        .scaleEffect(isAnimated ? randomScale() : 1)
-                        .onAppear(perform: {
-                            withAnimation(
-                                .interpolatingSpring(stiffness: 0.25, damping: 0.25)
-                                .repeatForever()
-                                .speed(randomSpeed())
-                                .delay(randomDelay())
-                            ){
-                                isAnimated = true
-                            }
-                        })
+                Group{
+                    ForEach(0...randomCircle, id: \.self) { item in
+                        Circle()
+                            .foregroundColor(.white)
+                            .opacity(0.25)
+                            .frame(width: randomSize())
+                            .position(
+                                x: randomCoordinate(),
+                                y: randomCoordinate()
+                            )
+                            .scaleEffect(isAnimated ? randomScale() : 1)
+                            .onAppear(perform: {
+                                withAnimation(
+                                    .interpolatingSpring(stiffness: 0.25, damping: 0.25)
+                                    .repeatForever()
+                                    .speed(randomSpeed())
+                                    .delay(randomDelay())
+                                ){
+                                    isAnimated = true
+                                }
+                            })
+                    }
                 }
             }
             .frame(width: 256, height: 256)
