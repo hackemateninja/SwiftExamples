@@ -8,61 +8,30 @@
 import SwiftUI
 
 struct HikeSettingsView: View {
+    
+    @ObservedObject var viewModel = HikeSettingsViewModel()
+    
+    
     var body: some View {
         List{
             // MARK: - SECTION: HEADER
-            Section{
-                HStack(){
-                    Group{
-                        Spacer()
-                        
-                        Image(systemName: "laurel.leading")
-                            .font(.system(size: 80, weight: .black))
-                        
-                        VStack(spacing: -10) {
-                            Text("Hike")
-                                .font(.system(size: 66, weight: .black))
-                            
-                            Text("Editors' Choice")
-                                .fontWeight(.medium)
-                        }
-                        
-                        Image(systemName: "laurel.trailing")
-                            .font(.system(size: 80, weight: .black))
-                        
-                        Spacer()
-                    }
-                }
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [.customGreenLight, .customGreenMedium, .customGreenDark],
-                        startPoint: .top,
-                        endPoint: .bottom)
-                )
-                .padding(.top, 8)
-                
-                VStack(spacing: 8){
-                    Group{
-                        Text("Where can you find \nperfect tracks?")
-                            .font(.title2)
-                            .fontWeight(.heavy)
-                        
-                        Text("The hike which looks gorgeous in photos but is event better once you are actually there. The hike that you hope to do again someday. \nFind the best day hikes in the app.")
-                            .font(.footnote)
-                            .italic()
-                        
-                        Text("Dust off the boots! It's time for a walk.")
-                            .fontWeight(.heavy)
-                            .foregroundColor(.customGreenMedium)
-                    }
-                }
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 16)
-                .frame(maxWidth: .infinity)
-            } //: HEADER
-            .listRowSeparator(.hidden)
+            HikeSettingsHeader(
+                title: "Hike",
+                leyend: "Editors' Choice",
+                subTitle: "Where can you find \nperfect tracks?",
+                description: "The hike which looks gorgeous in photos but is event better once you are actually there. The hike that you hope to do again someday. \nFind the best day hikes in the app.",
+                suggestion: "Dust off the boots! It's time for a walk."
+            )
             
             // MARK: - SECTION: ICONS
+            HikeSectionChangeIcon(
+                title: "Alternate Icons",
+                description: "Choose your favorite app icon from the collection above",
+                alternateAppIcons: viewModel.alternateAppIcons,
+                onChangeIcon: { selectedIndex in
+                    viewModel.changeIcon(item: selectedIndex) // Aquí pasamos el índice al ViewModel
+                                }
+            )
             
             // MARK: - SECTION: ABOUT
             Section(
@@ -74,7 +43,14 @@ struct HikeSettingsView: View {
                 }
                     .padding(.vertical, 8)
             ){
-                Text("List Row")
+                ForEach(viewModel.hikeSettingsDescData) { item in
+                    HikeCustomListRow(
+                        rowLabel: item.rowLabel,
+                        rowIcon: item.rowIcon,
+                        rowContent: item.rowContent,
+                        rowTintColor: item.rowTintColor,
+                        rowLinkDestination: item.rowLinkDestination)
+                }
             }//: SECTION
         }// LIST
     }

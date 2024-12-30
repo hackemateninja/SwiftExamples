@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct HikeCardHeader: View {
+struct HikeCardHeader<SheetContent:View>: View {
     let title: String
     let description: String
     let buttonImage: String
     @Binding var isSheetPresented: Bool
     let action: () -> Void
-    let sheetContent: () -> AnyView
+    @ViewBuilder let sheetContent: () ->  SheetContent
     
 
     var body: some View {

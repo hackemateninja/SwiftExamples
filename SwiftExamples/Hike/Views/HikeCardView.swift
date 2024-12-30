@@ -25,9 +25,7 @@ struct HikeCardView: View {
                     isSheetPresented: $viewModel.isSheetPresented,
                     action: { viewModel.toggleSheet()}
                 ){
-                   AnyView(
-                        HikeSettingsView()
-                    )
+                    HikeSettingsView()
                }
                 
                 // MARK: - MAIN CONTENT
